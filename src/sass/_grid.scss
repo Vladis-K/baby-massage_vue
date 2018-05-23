@@ -1,0 +1,28 @@
+
+hidden-lg {
+  display: block;
+  @media only screen and (min-width: 1201px) {
+    display: none;
+  }
+}
+
+.hidden-md {
+  display: block;
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.hidden-sm {
+  display: block;
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+    display: none;
+  }
+}
+
+.hidden-xs {
+  display: block;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}

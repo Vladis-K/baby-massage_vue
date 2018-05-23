@@ -1,0 +1,288 @@
+@import '_fonts.scss';
+@import '_colors.scss';
+@import '_animations.scss';
+@import '_buttons.scss';
+@import '_grid.scss';
+
+html {
+  position: relative;
+  height:100%;
+}
+
+body {
+  @include nunitoLight;
+
+  position: relative;
+  height:100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: transparentize($colorGreyLight, .9);
+}
+
+textarea {
+  resize: none;
+  overflow-y: scroll;
+}
+
+//Navbar menu
+#app {
+  position: relative;
+  width: 100%;
+  min-height:100%;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  h1 {
+    @include popinsLight;
+    margin: 0;
+    font-size: 50px;
+    line-height: 50px;
+    user-select: none;
+    color: transparentize($colorInputPrimary, .3);
+
+    @media only screen and (max-width: 1024px) {
+      font-size: 35px;
+    }
+    @media only screen and (max-width: 768px) {
+      font-size: 25px;
+    }
+  }
+
+  h2 {
+    @include popinsRegular;
+    margin: 0;
+    font-size: 40px;
+    line-height: 30px;
+    color: transparentize($colorInputPrimary, .3);
+
+    @media only screen and (max-width: 1024px) {
+      font-size: 25px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      font-size: 23px;
+    }
+  }
+
+  h3 {
+    @include popinsRegular;
+    margin: 0;
+    font-size: 30px;
+    line-height: 30px;
+    color: transparentize($colorInputPrimary, .3);
+
+    @media only screen and (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+  h4 {
+    @include popinsRegular;
+    margin: 0;
+    font-size: 15px;
+    line-height: 20px;
+    color: transparentize($colorInputPrimary, .4);
+
+    @media only screen and (max-width: 768px) {
+      font-size: 10px;
+    }
+  }
+
+  .icon-mobile-menu {
+    display: none;
+
+    @media only screen and (max-width: 768px) {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 10;
+    }
+  }
+
+  .header-outer {
+    background-color: $colorGreyLight;
+  }
+
+  i.el-icon-menu,
+  i.el-icon-close {
+    font-size: 22px;
+    color: #685AFD;
+  }
+
+  .mobile-menu {
+    display: none;
+
+    @media only screen and (max-width: 768px) {
+      display: block !important;
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: transparentize($colorGreyLight, .1);
+      z-index: 9;
+    }
+  }
+
+  ul.el-menu--horizontal {
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    background-color: $colorGreyLight;
+
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+
+    & > li:last-child {
+      margin-right: 0;
+    }
+    & > .el-menu-item {
+      padding: 0;
+      margin: 0 20px;
+
+      @media only screen and (max-width: 1024px) {
+        margin: 0 10px;
+      }
+      .nav-item-title {
+        & > i[class^="el-icon"] {
+          margin-right: 2px;
+        }
+      }
+      .nav-item-title, i[class^="el-icon"] {
+        color: transparentize($colorGreyDark, .5);
+        transition: all .3s ease;
+      }
+      &:hover {
+        border-bottom: 3px solid transparentize(#685AFD, .5);
+        transition: all .3s ease;
+        .nav-item-title, i[class^="el-icon"] {
+          color: $colorGreyDark;
+          transition: all .3s ease;
+        }
+      }
+    }
+
+    & > .router-link-active {
+      border-bottom: 3px solid #685AFD;
+      transition: all .3s ease;
+      background-color: $colorGreyLight;
+      .nav-item-title, i[class^="el-icon"] {
+        color: $colorGreyDark;
+        font-weight: 500;
+        transition: all .3s ease;
+      }
+      button {
+        text-transform: uppercase;
+        border: 1px solid transparentize($colorPrimary, 0.8);
+        color: $colorGreyDark;
+        transition: all .3s ease;
+        &:hover {
+          color: $colorGreyDark;
+          border: 1px solid transparentize($colorGreyLight, 0.8);
+        }
+      }
+    }
+  }
+}
+
+//Bootstrap container items
+.container {
+  width: 1140px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (max-width: 1200px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 994px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: calc(100vw - 30px);
+  }
+}
+//Override sizes
+
+.col-w-33 {
+  width: 33.33333%;
+}
+.col-w-50 {
+  width: 50%;
+}
+.col-w-67 {
+  width: 66.66667%;
+}
+.w-100 {
+  width: 100%;
+}
+
+.el-display-none {
+  display: none;
+}
+
+.el-display-block {
+  display: block;
+}
+
+
+.u-link-trim {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  // color: $colorInputPrimary;
+}
+.top-alert {
+  width: 200px;
+}
+
+.b64-message {
+  width: 290px;
+}
+
+
+.text-description {
+  @include nunitoRegular;
+
+  font-size: 14px;
+  color: rgba(53, 61, 76, 0.7);
+  line-height: 25px;
+}
+
+.title-text-description {
+  @include nunitoBold;
+
+  font-size: 24px;
+  color: $colorInputPrimary;
+}
+
+.dots {
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: transparentize($colorInputPrimary, .85);
+  border: 1px solid transparentize($colorInputPrimary, .7);
+}
