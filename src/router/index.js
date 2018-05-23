@@ -12,10 +12,10 @@ const router = new Router({
   routes: [
     {
       path: '*',
-      redirect: '/'
+      redirect: '/main'
     },
     {
-      path: '/',
+      path: '/main',
       name: 'Main',
       component: Main,
     },

@@ -3,14 +3,14 @@
   "all": [
     "fonts/element-icons.ttf?6f0a76321d30f3c8120915e57f7bd77e",
     "vendor.3ac30fe89d38889eb454.js",
-    "app.a6cd7ec06203983b7905.js",
+    "app.6397ecd7970f294266aa.js",
     "manifest.54e67e9f17df71efc259.js",
-    "common.a6cd7ec06203983b7905.css"
+    "common.6397ecd7970f294266aa.css"
   ],
   "initial": [
     "manifest.54e67e9f17df71efc259.js",
     "vendor.3ac30fe89d38889eb454.js",
-    "app.a6cd7ec06203983b7905.js"
+    "app.6397ecd7970f294266aa.js"
   ],
   "async": [],
   "modules": {
